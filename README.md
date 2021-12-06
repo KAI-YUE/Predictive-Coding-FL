@@ -11,7 +11,7 @@ The scheme has shared prediction functions among all devices and allows each wor
 pip3 install -r requirements.txt
 ```
 
-<!-- The dataset is included in the repository. Cloning the repository may take some time. You may fork it and modify `.gitignore` if this behavior undesirable. -->
+Download the 
 
 ####  Example
 
