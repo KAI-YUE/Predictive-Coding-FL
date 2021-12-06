@@ -11,7 +11,7 @@ The scheme has shared prediction functions among all devices and allows each wor
 pip3 install -r requirements.txt
 ```
 
-Download the 
+Download the [dataset](https://drive.google.com/drive/folders/13L3Wx9dmY_WUEcDmR_SQdwISXrNdsS5_?usp=sharing), unzip it and put them under `data` folder. 
 
 ####  Example
 
