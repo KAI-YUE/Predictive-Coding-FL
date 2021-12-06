@@ -1,0 +1,77 @@
+# device: "cuda" | "cpu"
+device: cuda
+
+# distributed networks
+# users:            number of users
+# part_rate:        set to 1 as full participation
+users: 30
+part_rate: 1
+
+# hyperparameters and model type
+# model:            neural network model 
+# local_batch_size: size of the local batch
+# tau:              number of local iterations
+# rounds:           total communication rounds
+# lr:               learning rate
+model: "vgg"
+full_weight_dir: ""
+
+local_batch_size: 100
+tau: 20
+rounds: 10
+lr: 0.0005
+
+# configurations for the prediction, quantizer, and entropy coder
+# predictor:           "all", use all the predictors
+# quantization_level:  (2*s + 1)
+# entropy_coder:       entropy | arithmetic (deprecated, the software-based implementation on a single machine is slow)
+# lambda_:             lagrangian multiplier
+predictor:
+- "all"
+
+order: 3
+scaler: 0.99
+step_size:
+- 1.e-3
+- 1.e-4
+adam_step_size: 1.e-3
+betas:
+- 0.8
+- 0.9
+
+quantization_level: 3
+quantizer: "norm_pos"
+backup_quantizer: "qsgd_pos"
+
+entropy_encoder: "entropy"
+lambda_: 0.1
+
+
+# Simulation dataset configurations
+# test_data_dir : the directory to the testDataset
+# train_data_dir: the directory to the trainDataset
+# sample_size:    the size of one training example 
+# classes:        the number of classes
+# user_with_data: user and training example mapping pair
+test_data_dir:  data/cifar/test.dat
+train_data_dir: data/cifar/train.dat
+sample_size:
+- 32
+- 32
+channels: 3
+classes: 10
+
+user_with_data: "data/user_with_data/cifar/a0.5/user_dataidx_map_0.50_0.dat"
+record_dir:     ../{}.dat
+
+# Log configurations
+log_iters:   1
+log_level:   "INFO"
+log_file:    "./train.log"
+
+lr_scaler: 0.33
+scheduler: 
+- 50
+- 70
+- 90
+- 1000
