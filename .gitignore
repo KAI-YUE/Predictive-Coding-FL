@@ -104,8 +104,8 @@ archive/
 /site
 
 # data files
-# *.dat
-cifar/
+train.dat
+test.dat
 *.pth
 *.npy
 *.txt
