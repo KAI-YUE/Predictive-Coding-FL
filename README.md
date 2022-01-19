@@ -3,7 +3,7 @@
 ![](https://img.shields.io/badge/status-maintained-green) ![](https://img.shields.io/badge/Pytorch-1.9.0-blue)
 
 #### Introduction
-In this [paper](https://arxiv.org/abs/2108.00918), we propose a predictive coding based communication scheme for federated learning. 
+In this [paper](https://arxiv.org/abs/2108.00918), we propose a predictive coding based compression scheme for federated learning. 
 The scheme has shared prediction functions among all devices and allows each worker to transmit a compressed residual vector derived from the reference.
 
 #### Prerequisites
