@@ -27,7 +27,7 @@ Download the [dataset](https://drive.google.com/drive/folders/13L3Wx9dmY_WUEcDmR
     ```bash
     python3 main.py
     ```
-The release version has simplified the scheme with a globally shared prediction scheme.
+The release version has simplified the scheme with a globally shared prediction procedure.
 
 <br />
 
