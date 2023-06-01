@@ -108,4 +108,4 @@ train.dat
 test.dat
 *.pth
 *.npy
-*.txt
+
